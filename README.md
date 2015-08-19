@@ -2,14 +2,26 @@
 ## Powered by NodeJS, ExpressJS, MongoDB, and Bootstrap.
 
 ## Setup
+
+Homebrew can be used for dependency management on OS X almost efforlessly.
+This guide uses homebrew to install MongoDB and NodeJS.
+To install Homebrew:
+```
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+To install Node:
+```
+$ brew install node
+```
+By default node is packaged with the node package manager NPM
+
 Install Node and npm. Then run
 ```
 $ npm install
 ```
-If you're running OSX, install brew.
 
 
-If you don't have mongo
+If you don't have MongoDB
 ```
 $ brew install mongo
 ```
