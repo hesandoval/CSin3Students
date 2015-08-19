@@ -19,14 +19,28 @@ Install Node and npm. Then run
 ```
 $ npm install
 ```
-
+NPM install installs all of the local node libraries defined in the package.json file
 
 If you don't have MongoDB
 ```
 $ brew install mongo
 ```
-
-Run mongod to make sure everything is good
+After installing create a db directory
+```
+$ mkdir -p /data/db //You may need to run this command as superuser
+```
+Run mongod to make sure everything is good:
+```
+$ mongod
+```
+If mongo fails for this reason:
+```
+2015-08-19T11:12:18.737-0600 I STORAGE  [initandlisten] exception in initAndListen: 98 Unable to create/open lock file: /data/db/mongod.lock errno:13 Permission denied Is a mongod instance already running?, terminating
+```
+run
+```
+$ sudo chown -R `id -u` /data/db //changes the permisions of the /data/db diretctories
+```
 
 ### Contributing
 Clone the repository and push up a branch to this repository.
