@@ -27,7 +27,7 @@ $ brew install mongo
 ```
 After installing create a db directory
 ```
-$ mkdir -p /data/db **//You may need to run this command as superuser**
+$ sudo mkdir -p /data/db 
 ```
 Run mongod to make sure everything is good:
 ```
@@ -39,7 +39,7 @@ If mongo fails for this reason:
 ```
 run
 ```
-$ sudo chown -R `id -u` /data/db **//changes the permisions of the /data/db diretctories**
+$ sudo chown -R `id -u` /data/db
 ```
 
 ### Contributing
