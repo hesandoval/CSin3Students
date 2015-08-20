@@ -7,8 +7,8 @@ var log = require('./../util/logger');
 log(mongourl.mongodb.uri);
 var connection = mongoose.connect(mongourl.mongodb.uri);
 
-var daniel = new Student({id: 1,name: 'Daniel'})
-var csumb = new Event({id: 1, name: 'csumb'});
+var daniel = new Student(mongourl.students.daniel);
+var csumb = new Event(mongourl.events.codekickit);
 
 log('Inserting student- ' + daniel.name);
 log('Inserting event- ' + csumb.name);
@@ -23,7 +23,7 @@ async.waterfall([
 		}
 		log('Succesfully bootstraped!');
 		process.exit(0);
-	})
+	});
 
 function insertStudent (student, cb) {
 	student.save(function(err) {
@@ -31,7 +31,7 @@ function insertStudent (student, cb) {
 			return cb(new Error('Failed to insert student'));
 		}
 		return cb(null);
-	})
+	});
 }
 
 function insertEvent(event, cb) {
@@ -40,5 +40,5 @@ function insertEvent(event, cb) {
 			return cb(new Error('Failed to insert event'));
 		}
 		return cb(null);
-	})
+	});
 }

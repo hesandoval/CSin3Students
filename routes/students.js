@@ -32,14 +32,13 @@ module.exports = function(router) {
 
         return StudentsSchema.find({}).lean().exec(function (err, students) {
             if (!err) {
-                var ob = students[0];
-
-                var studentList = ob.currentStudents.filter(function(student) {
+                var ob = students;
+                var studentList = ob.filter(function(student) {
                     return student.isAlumni === false;
                 });
 
                 studentList.sort(function() {
-                    return .5 - Math.random();
+                    return 0.5 - Math.random();
                 });
 
                 return res.send(studentList);
@@ -60,7 +59,7 @@ module.exports = function(router) {
                 });
                 return res.send(student);
             }
-        })
-    })
+        });
+    });
 
-}
+};

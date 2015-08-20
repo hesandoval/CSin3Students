@@ -41,6 +41,26 @@ run
 ```
 $ sudo chown -R `id -u` /data/db
 ```
+##Before starting project run:
+```
+$ scripts/bootstrap-database.js
+```
+###This command will initialize your database with dummy data
+
+
+##Running the Project with local instance of mongoDB
+###Using nodemon:
+```
+$ nodemon localApp.js
+```
+###Using npm:
+```
+$ npm start
+```
+###Using node:
+```
+$ node localApp.js
+```
 
 ### Contributing
 Clone the repository and push up a branch to this repository.

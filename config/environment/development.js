@@ -9,7 +9,9 @@ module.exports = {
 			id: 1,
 			name: 'Daniel',
 			email: "diazjfdaniel@gmail.com",
-			linkedin: "https://github.com/dcarrot2",
+			website: "https://www.google.com",
+			linkedin: "https://www.linkedin.com",
+			github: "https://github.com/dcarrot2",
 			summary: "Nodejs and Basketball",
 			detail: "Development, code code code",
 			isAlumni: false,
@@ -20,10 +22,10 @@ module.exports = {
 	events: {
 		codekickit: {
 			id: 1,
-			name: "Kick it with Code2040", 
+			name: "Kick it with Code2040",
 			date: "1438393194",
 			lat: "37.7822671",
-			long: "-122.3912479", 
+			long: "-122.3912479",
 			location: "Github offices",
 			summary: "A fundraiser and hangout with Code2040!",
 			members: [
@@ -35,4 +37,4 @@ module.exports = {
 			isFulltime: false
 		}
 	}
-}
+};
